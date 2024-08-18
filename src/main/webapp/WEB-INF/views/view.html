@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="/layout :: head">
+    <title>Detail Computer</title>
+</head>
+<body>
+<h3>View Computer</h3>
+<p>
+    <a th:href="@{/computers}">
+        Back to computer list
+    </a>
+</p>
+<div id="detail">
+    <div class="cus-detail">
+        <label>ComputerName</label>
+        <label th:text="${computer.computerName}"></label>
+    </div>
+    <div class="cus-detail">
+        <label>ComputerCode</label>
+        <label th:text="${computer.computerCode}"></label>
+    </div>
+    <div class="cus-detail">
+        <label>Manufacturer:</label>
+        <label th:text="${computer.manufacturer}"></label>
+    </div>
+    <div class="cus-detail">
+        <label>Price:</label>
+        <label th:text="${computer.price}"></label>
+    </div>
+    <div class="cus-detail">
+        <label>Image</label>
+        <label th:text="${computer.img}"></label>
+    </div>
+</div>
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>
